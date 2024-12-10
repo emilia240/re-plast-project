@@ -1,0 +1,353 @@
+
+/* ANIMATIONS, TRANSITIONS, FILTERS you idiot <3 */
+ /*  media q --- flex-direction, font-size, font-size, display-none
+  do it for 3 screen types */
+
+ /*  test, test, test */
+ :root {
+  --white-smoke:#F5F5F5;
+  --cerulean:#28789F;
+  --office-green:#338000;
+  --sun-glow:#FDC835;
+  --footer-color-gradient:linear-gradient(180deg, rgba(65,47,21,1) 0%, rgba(18,18,18,1) 100%);
+  --indigo-dye:#194B63;
+  --night:#121212;
+
+  --padding-headings:18px;
+
+ }
+
+/* universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+button {
+  width: fit-content; /* Do I still need it?? */
+  background-color: var(--office-green);
+  border: none;
+  border-radius: 20px;
+  width: 200px;
+  height: 95px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow:0px 5px 10px #183c00;
+}
+
+button a {
+  color: var(--white-smoke);
+  font-family:"futura-pt demi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  transform: translateY(-10px);
+} 
+/* Line below headings */
+
+.line {
+  width: 200px;
+  height: 4px;
+  background-color: var(--cerulean);
+  margin: 18px auto 0;
+  border-radius: 1.5px;
+} 
+
+/* fonts */
+h1 {
+  font-family: "cubano", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: var(--white-smoke);
+  text-shadow: 1px 1px 3px #3b3b3b;
+}
+
+h2 {
+  font-family: "futura-pt demi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: var(--night);
+  margin-top: 50px;
+}
+
+h3 {
+  font-family: "futura-pt demi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  color: var(--white-smoke);
+}
+
+p {
+  font-family: "greycliff-cf", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 26px;
+}
+
+/* containers */
+
+.hero-container {
+  background-color: var(--cerulean);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(/img/plasticbag.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-split {
+  display: flex;
+  width: 100%;
+  padding: 80px 60px;
+  justify-content: space-between;
+}
+
+.inner-container-left {
+  width: 50%;
+  padding: 50px 50px 50px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inner-container-right {
+  width: 50%;
+}
+
+.info-container {
+  background-color: rgb(168, 199, 127);
+  width: 90%;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button-container button {
+  margin-right: 25px;
+}
+.button-container button:last-child {
+  margin-right: 0;
+}
+
+/* navigation */
+.navigation {
+  background-color: var(--white-smoke);
+  position: relative;
+}
+
+.menu-container {
+ width: 100%; 
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+#logo-navigation {
+  width: 245px;
+  height: auto;
+}
+
+.menu-container ul {
+  display: flex;
+  padding: 20px;
+}
+
+.menu-container ul li {
+  list-style-type: none;
+  font-family: "greycliff-cf", sans-serif;
+  padding: 0 15px;
+}
+
+.menu-container ul li a {
+  color: var(--night);
+  text-decoration: none;
+  font-size: 36px;
+}
+
+.menu-container ul li a:hover {
+  color: var(--office-green);
+  font-size: 38px;
+}
+
+/* Hero */
+
+.hero-container h2 {
+  color: var(--white-smoke);
+  text-transform: none;
+  margin-top: 15px;
+  margin-bottom: 140px;
+  text-shadow: 1px 1px 3px #3b3b3b;
+}
+
+/* .hero-container p {
+  color: var(--white-smoke);
+  margin-top: 80px;
+} in case they don't like the motion option*/
+
+/* motion text */
+.re-plast-motto {
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--white-smoke);
+  font-size: 32px;
+  font-family: "greycliff-cf", sans-serif;
+  text-shadow: 1px 1px 3px #3b3b3b;
+  margin-top:80px;
+}
+
+.re-plast-motto span {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+/* I want it to go full screen :((*/
+
+/* About us */
+
+.about {
+  height: fit-content;
+  background-color: var(--white-smoke);
+}
+
+.inner-container-right img{
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+
+  border-top: 8px solid var(--sun-glow);
+  border-left: 5px solid var(--sun-glow);
+  border-radius: 15px;
+}
+
+/* Environment */
+.environment {
+  height: fit-content;
+  background-color: var(--white-smoke);
+}
+
+.container-environment-information {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 170px;
+}
+
+.container-environment-information img{
+  height: 660px;
+  width: 1100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+
+  border-top: 8px solid var(--sun-glow);
+  border-right: 5px solid var(--sun-glow);
+  border-radius: 15px;
+}
+/* nope, definetly not right */
+
+
+/* Our impact */
+.impact {
+  height: fit-content;
+  background-color: var(--white-smoke);
+}
+
+.video-impact {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 80px 170px;
+}
+
+.video-impact img {
+  height: 660px;
+  width: 1100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+
+  border-bottom: 8px solid var(--sun-glow);
+  border-left: 5px solid var(--sun-glow);
+  border-radius: 15px;
+}
+
+/* Volunteer */
+
+.volunteer {
+  height: fit-content;
+  background-color: var(--white-smoke);
+}
+.info-container {
+  background-color: var(--cerulean);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 20px 15px;
+  margin: 80px auto;
+}
+
+.info-container p {
+  color: var(--white-smoke);
+}
+
+
+
+/* media queries */
+
+@media (width <576px) {
+  .container-split {
+    flex-direction: column;
+  }
+  .inner-container-left {
+    width: 100%;
+  }
+  .inner-container-right {
+    width: 100%;
+  }
+
+}
+
+/* @media (width <992px) {} 
+
+  @media (width <576px) {} 
+*/

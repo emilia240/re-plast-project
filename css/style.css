@@ -5,15 +5,16 @@
 
  /*  test, test, test */
  :root {
-  --white-smoke:#F5F5F5;
+  --white-smoke:#f5f5f5;
   --cerulean:#28789F;
   --office-green:#338000;
   --sun-glow:#FDC835;
-  --footer-color-gradient:linear-gradient(180deg, rgba(65,47,21,1) 0%, rgba(18,18,18,1) 100%);
+  --footer-color-gradient: linear-gradient(180deg, rgba(65,47,21,1) 0%, rgba(18,18,18,1) 100%);
   --indigo-dye:#194B63;
   --night:#121212;
 
-  --padding-headings:18px;
+  --padding-paragraphs: 50px 140px 50px 30px;
+  --padding-content-sections: 80px;
 
  }
 
@@ -24,8 +25,9 @@
   box-sizing: border-box;
 } 
 
+/* button */
+
 button {
-  width: fit-content; /* Do I still need it?? */
   background-color: var(--office-green);
   border: none;
   border-radius: 20px;
@@ -39,7 +41,6 @@ button a {
   color: var(--white-smoke);
   font-family:"futura-pt demi", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 22px;
   text-transform: uppercase;
   text-decoration: none;
@@ -50,7 +51,8 @@ button a {
 button:hover {
   transform: translateY(-10px);
 } 
-/* Line below headings */
+
+/* The line below headings */
 
 .line {
   width: 200px;
@@ -60,11 +62,10 @@ button:hover {
   border-radius: 1.5px;
 } 
 
-/* fonts */
+/* text */
 h1 {
   font-family: "cubano", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 80px;
   color: var(--white-smoke);
   text-shadow: 1px 1px 3px #3b3b3b;
@@ -73,17 +74,14 @@ h1 {
 h2 {
   font-family: "futura-pt demi", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 55px;
   text-transform: uppercase;
   color: var(--night);
-  margin-top: 50px;
 }
 
 h3 {
   font-family: "futura-pt demi", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 32px;
   color: var(--white-smoke);
 }
@@ -91,11 +89,24 @@ h3 {
 p {
   font-family: "greycliff-cf", sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 26px;
+  line-height: 1.5;
+  margin: 18px 0;
 }
 
 /* containers */
+.background-container {
+  background-color: var(--white-smoke);
+  height: auto;
+  width: 100%;
+}
+
+.menu-container {
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
 
 .hero-container {
   background-color: var(--cerulean);
@@ -106,7 +117,7 @@ p {
   align-items: center;
   justify-content: center;
 
-  background-image: url(/img/plasticbag.png);
+  background-image: url(/img/plastic-bag-in-water.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -118,18 +129,19 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 80px 0;
 }
 
 .container-split {
   display: flex;
   width: 100%;
-  padding: 80px 60px;
+  padding: var(--padding-content-sections);
   justify-content: space-between;
 }
 
 .inner-container-left {
   width: 50%;
-  padding: 50px 50px 50px 15px;
+  padding: var(--padding-paragraphs);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -140,12 +152,19 @@ p {
 }
 
 .info-container {
-  background-color: rgb(168, 199, 127);
   width: 90%;
+  background-color: var(--cerulean);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  padding: var(--padding-paragraphs);
+  margin: 80px 0;
 }
 
 .button-container {
   display: flex;
+  margin-bottom: 80px;
 }
 
 .button-container button {
@@ -155,17 +174,22 @@ p {
   margin-right: 0;
 }
 
+.footer-container {
+  background: var(--footer-color-gradient);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-content-sections);
+  margin-top: 80px;
+}
+
+
 /* navigation */
+
 .navigation {
   background-color: var(--white-smoke);
   position: relative;
-}
-
-.menu-container {
- width: 100%; 
- display: flex;
- justify-content: space-between;
- align-items: center;
 }
 
 #logo-navigation {
@@ -195,7 +219,7 @@ p {
   font-size: 38px;
 }
 
-/* Hero */
+/* Hero section*/
 
 .hero-container h2 {
   color: var(--white-smoke);
@@ -205,42 +229,45 @@ p {
   text-shadow: 1px 1px 3px #3b3b3b;
 }
 
+.hero-container button {
+  margin-bottom: 140px;
+}
+
 /* .hero-container p {
   color: var(--white-smoke);
   margin-top: 80px;
 } in case they don't like the motion option*/
 
-/* motion text */
+/* motion motto text */
+
 .re-plast-motto {
   overflow: hidden;
   white-space: nowrap;
-  color: var(--white-smoke);
-  font-size: 32px;
-  font-family: "greycliff-cf", sans-serif;
-  text-shadow: 1px 1px 3px #3b3b3b;
   margin-top:80px;
+  width: 100%;
+  background-color: var(--indigo-dye);
+  padding:10px;
 }
 
-.re-plast-motto span {
+.re-plast-motto h3{
   display: inline-block;
-  animation: scroll 10s linear infinite;
+  animation: scroll 7s linear infinite;
+  width: 100%;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(100%);
   }
 }
-/* I want it to go full screen :((*/
 
-/* About us */
+/* About us section */
 
 .about {
   height: fit-content;
-  background-color: var(--white-smoke);
 }
 
 .inner-container-right img{
@@ -259,14 +286,13 @@ p {
 /* Environment */
 .environment {
   height: fit-content;
-  background-color: var(--white-smoke);
 }
 
 .container-environment-information {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 80px 170px;
+  padding: var(--padding-content-sections);
 }
 
 .container-environment-information img{
@@ -281,20 +307,18 @@ p {
   border-right: 5px solid var(--sun-glow);
   border-radius: 15px;
 }
-/* nope, definetly not right */
 
 
 /* Our impact */
 .impact {
   height: fit-content;
-  background-color: var(--white-smoke);
 }
 
 .video-impact {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 80px 170px;
+  padding: var(--padding-content-sections);
 }
 
 .video-impact img {
@@ -310,27 +334,25 @@ p {
   border-radius: 15px;
 }
 
+.impact button {
+  margin-bottom: 80px;
+}
+
 /* Volunteer */
 
 .volunteer {
   height: fit-content;
-  background-color: var(--white-smoke);
-}
-.info-container {
-  background-color: var(--cerulean);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 15px;
-  padding: 20px 15px;
-  margin: 80px auto;
 }
 
 .info-container p {
   color: var(--white-smoke);
 }
 
+/* Footer */
 
+.footer {
+  height: fit-content;
+}
 
 /* media queries */
 

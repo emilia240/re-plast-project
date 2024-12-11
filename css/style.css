@@ -446,8 +446,8 @@ p.footer-text {
 /* media queries */
 
 
-
-@media (width <992px) {
+/* tablet */
+@media (width <992px) { 
   h1{
     font-size: 60px;
   }
@@ -509,6 +509,7 @@ p.footer-text {
   }
 }
 
+/* mobile */
 @media (width <576px) {
 
   h1{
@@ -528,10 +529,3 @@ p.footer-text {
   }
 
 }
-
-
-
-/* @media (width <992px) {} 
-
-  @media (width <576px) {} 
-*/

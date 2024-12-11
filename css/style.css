@@ -390,6 +390,10 @@ p {
   button a {
     font-size: 18px;
   }
+
+  .footer-container {
+    padding: 32px 12px;
+  }
 }
 
 @media (width <576px) {

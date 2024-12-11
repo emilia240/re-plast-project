@@ -38,13 +38,21 @@ button {
   border-radius: 20px;
   /* width: 200px;
   height: 95px; */
+  cursor:pointer;
   width: fit-content;
   padding: 24px 64px;
   transition: background-color 0.3s, transform 0.3s;
   box-shadow:0px 5px 10px #183c00;
+
+  color: var(--white-smoke);
+  font-size: 22px;
+  font-family:"futura-pt demi", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
-button a {
+/* button a {
   color: var(--white-smoke);
   font-family:"futura-pt demi", sans-serif;
   font-weight: 400;
@@ -53,7 +61,7 @@ button a {
   text-decoration: none;
   display: flex;
   justify-content: center;
-}
+} */
 
 button:hover {
   transform: translateY(-10px);
@@ -108,6 +116,7 @@ p {
   font-family: "greycliff-cf", sans-serif;
   font-weight: 400;
   font-size: 26px;
+  line-height: 1;
 }
 
 /* containers */
@@ -163,16 +172,20 @@ p {
 .container-split {
   display: flex;
   width: 100%;
-  padding: var(--padding-content-sections);
+  /* padding: var(--padding-content-sections); */
+  padding: 64px 96px ;
   justify-content: space-between;
+  gap: 32px;
 }
 
 .inner-container-left {
   width: 50%;
-  padding: var(--padding-paragraphs);
+  /* padding: var(--padding-paragraphs); */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
 }
 
 .inner-container-right {
@@ -180,19 +193,27 @@ p {
 }
 
 .info-container {
-  width: 90%;
+  width: 100%;
   background-color: var(--cerulean);
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 15px;
-  padding: var(--padding-paragraphs);
+  /* padding: var(--padding-paragraphs); */
+  padding: 32px;
   margin: 80px 0;
+}
+
+.volunteer-container {
+  padding: 64px 96px ;
 }
 
 .button-container {
   display: flex;
   margin-bottom: 80px;
+  gap: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .button-container button {
@@ -207,7 +228,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: var(--padding-content-sections);
   margin-top: 80px;
 
@@ -327,12 +348,13 @@ p.footer-text {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: var(--padding-content-sections);
+  padding: 64px 96px ;
+  /* padding: var(--padding-content-sections); */
 }
 
 .container-environment-information img{
-  height: 660px;
-  width: 1100px;
+  height: auto;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -353,12 +375,13 @@ p.footer-text {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: var(--padding-content-sections);
+  padding: 64px 96px ;
+  /* padding: var(--padding-content-sections); */
 }
 
 .video-impact img {
-  height: 660px;
-  width: 1100px;
+  height: auto;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -381,6 +404,10 @@ p.footer-text {
 
 .info-container p {
   color: var(--white-smoke);
+}
+
+.volunteer-container h2{
+  text-align: center;
 }
 
 /* Footer */
@@ -433,35 +460,13 @@ p.footer-text {
     font-size: 28px;
   }
 
-  button a {
+  button {
     font-size: 18px;
   }
 
-  .footer-container {
-    padding: 32px 12px;
-
-    gap: 16px;
-
+  .container-split, .container-environment-information, .video-impact, .volunteer-container {
     flex-direction: column-reverse;
-  }
-
-  .footer-social-media {
-    width: 100%;
-  }
-  
-  .footer-links {
-    width: 100%;
-    height: fit-content;
-  }
-  
-  .footer-sign-treaty {
-    width: 100%;
-  }
-}
-
-@media (width <576px) {
-  .container-split {
-    flex-direction: column;
+    padding: 32px 32px;
   }
   .inner-container-left {
     width: 100%;
@@ -469,6 +474,42 @@ p.footer-text {
   .inner-container-right {
     width: 100%;
   }
+
+  .footer-container {
+    padding: 32px 16px 64px 16px;
+
+    gap: 32px;
+
+    flex-direction: column-reverse;
+  }
+
+  .footer-social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-sign-treaty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p.footer-text {
+    text-align: center;
+  }
+}
+
+@media (width <576px) {
 
   h1{
     font-size: 40px;
@@ -482,7 +523,7 @@ p.footer-text {
     font-size: 22px;
   }
 
-  button a {
+  button {
     font-size: 16px;
   }
 

@@ -31,8 +31,10 @@ button {
   background-color: var(--office-green);
   border: none;
   border-radius: 20px;
-  width: 200px;
-  height: 95px;
+  /* width: 200px;
+  height: 95px; */
+  width: fit-content;
+  padding: 24px 64px;
   transition: background-color 0.3s, transform 0.3s;
   box-shadow:0px 5px 10px #183c00;
 }
@@ -69,6 +71,7 @@ h1 {
   font-size: 80px;
   color: var(--white-smoke);
   text-shadow: 1px 1px 3px #3b3b3b;
+  text-align: center;
 }
 
 h2 {
@@ -102,14 +105,19 @@ p {
 }
 
 .menu-container {
+  background-color: var(--white-smoke);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%; 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  z-index: 1;
+  position: fixed;
  }
 
 .hero-container {
-  background-color: var(--cerulean);
+  /* background-color: var(--cerulean); */
   width: 100%;
   height: 100vh;
   display: flex;
@@ -117,11 +125,18 @@ p {
   align-items: center;
   justify-content: center;
 
-  background-image: url(/img/plastic-bag-in-water.png);
+  background-image: url(/img/plastic-bag-in-water.png); /* crop border and compress */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   background-position: center center;
+}
 
+.inner-hero-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 12px;
 }
 
 .container {
@@ -225,13 +240,14 @@ p {
   color: var(--white-smoke);
   text-transform: none;
   margin-top: 15px;
-  margin-bottom: 140px;
+  margin-bottom: 96px;
   text-shadow: 1px 1px 3px #3b3b3b;
+  text-align: center;
 }
 
-.hero-container button {
+/* .hero-container button {
   margin-bottom: 140px;
-}
+} */
 
 /* .hero-container p {
   color: var(--white-smoke);
@@ -243,9 +259,9 @@ p {
 .re-plast-motto {
   overflow: hidden;
   white-space: nowrap;
-  margin-top:80px;
+  margin-top:96px;
   width: 100%;
-  background-color: var(--indigo-dye);
+  background-color:rgba(12, 12, 12, 0.650);
   padding:10px;
 }
 
@@ -356,6 +372,26 @@ p {
 
 /* media queries */
 
+
+
+@media (width <992px) {
+  h1{
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  button a {
+    font-size: 18px;
+  }
+}
+
 @media (width <576px) {
   .container-split {
     flex-direction: column;
@@ -367,7 +403,25 @@ p {
     width: 100%;
   }
 
+  h1{
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  button a {
+    font-size: 16px;
+  }
+
 }
+
+
 
 /* @media (width <992px) {} 
 

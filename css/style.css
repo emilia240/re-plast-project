@@ -23,7 +23,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
+
+li {
+  list-style-type: none;
+  margin: 8px;
+}
 
 /* button */
 
@@ -95,6 +100,14 @@ p {
   font-size: 26px;
   line-height: 1.5;
   margin: 18px 0;
+}
+
+.footer-text {
+  color: var(--white-smoke);
+  text-decoration: none;
+  font-family: "greycliff-cf", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
 }
 
 /* containers */
@@ -197,6 +210,12 @@ p {
   align-items: center;
   padding: var(--padding-content-sections);
   margin-top: 80px;
+
+  gap: 12px;
+}
+
+p.footer-text {
+  margin-top: 8px;
 }
 
 
@@ -370,6 +389,33 @@ p {
   height: fit-content;
 }
 
+.footer-social-media {
+  width: 25%;
+}
+
+.footer-links {
+  width: 25%;
+  height: fit-content;
+}
+
+.footer-sign-treaty {
+  width: 50%;
+}
+
+.some-icon {
+  color: var(--white-smoke);
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.fa-brands {
+  font-size: 30px;
+}
+
 /* media queries */
 
 
@@ -393,6 +439,23 @@ p {
 
   .footer-container {
     padding: 32px 12px;
+
+    gap: 16px;
+
+    flex-direction: column-reverse;
+  }
+
+  .footer-social-media {
+    width: 100%;
+  }
+  
+  .footer-links {
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .footer-sign-treaty {
+    width: 100%;
   }
 }
 

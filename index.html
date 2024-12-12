@@ -3,41 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="reuse, petition, environment, plastic pollution, plastic">
+    <meta name="description" content="Description of the page"> <!-- COME BACK -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/wtj3umq.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- link nav options to section within the landingpage -->
-    <!--  use id's and data-category's to shorten the code; be smart pls -->
-    <!--   name the images wisely, you fool -->
-    <!-- also, resolution/scale/extension matters!!!!! -->
-    <!-- Use target keywords naturally in key elements:
-    titles, headings, meta descriptions,
-    and throughout the content. (K)-->
-    <!-- Include descriptive ALT tags with keywords
-    for all images.
-    Use image sitemaps to help with image
-    indexing.(K) -->
-    <!--  Optimize Meta Tags (Titles and Descriptions)
-    Write unique, compelling, and keyword-optimized
-    meta titles and descriptions for each
-    page to improve CTR.(K) -->
-    <!-- Internal and External links
-    Use a logical internal linking structure to
-    improve site navigation and distribute link
-    equity.
-    Use descriptive anchor texts that align with
-    the target keywords.(K) -->
 
     <div class="background-container">
 
         <!-- nav -->
         <nav class="navigation">
             <div class="menu-container">
-                <!-- Should I put this in a logo-navigation div? -->
-                <img src="svg/replast-primary-logo.svg" id="logo-navigation" alt="re-plast logo">
+                <a href="#"><img src="svg/replast-primary-logo.svg" alt="re-plast logo"></a>
                 <ul>
                     <li>
                         <a href="#about-section">About us</a>
@@ -60,7 +40,7 @@
             <div class="hero-container">
                 <div class="inner-hero-container">
                     <h1>Global plastic treaty</h1>
-                    <h2>Create a brighter future!</h2>
+                    <h2>RE-PLAST: Create a plastic-free brighter future!</h2>
                     <a href="https://www.greenpeace.org.au/act/global-plastics-treaty"><button>Act now</button></a>
                 </div>
                 <div class="re-plast-motto">
@@ -70,12 +50,14 @@
             </div>
         </section>
 
+        <!-- about us -->
         <section id="about-section" class="about">
             <div class="container">
                 <h2>About us</h2>
                 <div class="line"></div>
                 <div class="container-split">
                     <div class="inner-container-left">
+                        <h3>RE-PLAST and GLOBAL PLASTIC TREATY</h3>
                         <p>Plastic pollution is a growing crisis, but there’s an easy solution. By supporting the Global Plastic Treaty, you’re helping protect the environment, improve public health, and secure a better future. Join our petition and be part of the global movement to reduce plastic waste. Together, we can make a difference.</p>
                         <a style="width: fit-content;" href="https://www.greenpeace.org.au/act/global-plastics-treaty"><button>Learn more</button></a>
                     </div>
@@ -86,39 +68,62 @@
             </div>
         </section>
 
-        
+        <!-- environment -->
         <section id="environment-section" class="environment">
             <div class="container">
                 <h2>Environment</h2>
                 <div class="line"></div>
                 <div class="container-environment-information">
-                    <div class="image-container">
-                        <img src="img/plasticbag-shaped-fish-in-water.png" alt="plastic bag shaped as a fish in water">
+                    <div class="carrousel-container"> <!-- ignore it; I give up on the carrousel; -->
+                        <input type="radio" name="slider" id="slide-1" checked>
+                        <input type="radio" name="slider" id="slide-2">
+                        <input type="radio" name="slider" id="slide-3">
+                        <div class="image-slide">
+                                <img src="img/plasticbag-shaped-fish-in-water.png" alt="plastic bag shaped as a fish in water">
+                                <label for="slide-1"></label>
+                         </div>
+                        <div class="image-slide">
+                                <img src="img/plastic-bag-caught-in-flowers.jpg" alt="">
+                                <label for="slide-2"></label>
+                        </div>
+                        <div class="image-slide">
+                                <img src="img/plastic-inflated-sunflowers.jpg" alt="">
+                                <label for="slide-3"></label>
+                        </div>
+                        <div class="slider-controls">
+                                <label for="slide-1"></label>
+                                <label for="slide-2"></label>
+                                <label for="slide-3"></label>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- our impact -->
         <section id="impact-section" class="impact">
             <div class="container" >
                 <h2>Our impact</h2>
                 <div class="line"></div>
                 <div class="video-impact">
+                    <div class="play_icon">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
                     <div class="image-container">
                         <a href="https://www.youtube.com/watch?v=A3oL7v7PLac"><img src="img/green-garden-reused-plastic-bottles.png" alt="green plants garden made of reused plastic bottles"></a>
-                        <!-- <img src="img/plastic-inflated-sunflowers.jpg" alt=""> -->
                     </div>
                 </div>
-                <a href=""><button>More</button></a>
+                <a href=""><button>More videos</button></a>
             </div>
         </section>
 
+        <!-- volunteer -->
         <section id="volunteer-section" class="volunteer">
             <div class="volunteer-container">
                 <h2>Volunteer</h2>
                 <div class="line"></div>
                 <div class="info-container">
-                    <h3>Title</h3>
+                    <h3>Fight plastic pollution with RE-PLAST</h3>
                     <p>Join our volunteer team to fight plastic pollution! Support the Global Plastic Treaty, protect health, reduce waste, and safeguard our planet. Sign up now to make a difference!</p>
                 </div>
                 <div class="button-container">
@@ -128,10 +133,7 @@
             </div>
         </section>
 
-        <!--<section class="banner" style="background-color: rgb(147, 108, 183);">
-            bla bla
-        </section> -->
-
+        <!-- footer -->
         <footer>
             <div class="footer-container">
                 <div class="footer-social-media">
@@ -147,10 +149,10 @@
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a class="footer-text" href="#">About us</a></li>
-                        <li><a class="footer-text"href="#">Environment</a></li>
-                        <li><a class="footer-text"href="#">Our impact</a></li>
-                        <li><a class="footer-text"href="#">Voulnteer</a></li>
+                        <li><a class="footer-text" href="#about-section">About us</a></li>
+                        <li><a class="footer-text"href="#environment-section">Environment</a></li>
+                        <li><a class="footer-text"href="#impact-section">Our impact</a></li>
+                        <li><a class="footer-text"href="#volunteer-section">Voulnteer</a></li>
                     </ul>
                 </div>
                 <div class="footer-sign-treaty">

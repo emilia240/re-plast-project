@@ -19,7 +19,7 @@
     <div class="background-container">
 
         <!-- nav -->
-        <nav class="navigation">
+<!--         <nav class="navigation">
             <div class="menu-container">
                 <a href="#"><img src="svg/replast-primary-logo.svg" alt="re-plast logo"></a>
                 <ul>
@@ -37,7 +37,25 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navigation">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#hero"><img src="svg/replast-primary-logo.svg" height="60px" alt="RE-PLAST primary logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" href="#hero"><p>Home</p></a>
+                  <a class="nav-link" href="#about-section"><p>About</p></a>
+                  <a class="nav-link" href="#environment-section"><p>Environment</p></a>
+                  <a class="nav-link" href="#volunteer-section"><p>Volunteer</p></a>
+                  <a class="nav-link" href="#volunteer-section"><p class="nav-sign">Sign</p></a>
+                </div>
+              </div>
+            </div>
+          </nav>
 
         <!-- hero -->
         <section id="hero" class="hero">
@@ -66,7 +84,7 @@
                         <a style="width: fit-content;" href="https://www.greenpeace.org/international/act/lets-end-the-age-of-plastic/"><button>Learn more</button></a>
                     </div>
                     <div class="inner-container-right">
-                        <img src="img/kid_in_plastic.jpg" alt="kid in a pile of plastic">
+                        <img src="img/kid_in_plastic.jpg" alt="kid in plastic">
                     </div>
                 </div>
             </div>
@@ -79,23 +97,40 @@
                 <img class="line" src="/svg/line.svg" alt="line">
                 <!-- <div class="line"></div> -->
                 <div class="carousel-container">
-                    <div id="carousel" class="carousel slide">
+                    <div id="carouselCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="img/plastic_trash.jpg" class="d-block w-100" alt="pile of plastic garbage">
+                            <img src="img/plastic_in_humans.jpg" class="d-block w-100" alt="texture of plastic">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Plastic and humans</h5>
+                                <p>People consume around 5 grams of plastic weekly, equivalent to a credit card.</p>
+                            </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="img/plastic_sea.jpg" class="d-block w-100" alt="plastic bottles in the sea">
+                            <img src="img/plastic_sea.jpg" class="d-block w-100" alt="plastic sea">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Plastic and reuse</h5>
+                                <p>Over 400 million tons of plastic are produced yearly, and only 9% is recycled.</p>
+                            </div>
                             </div>
                             <div class="carousel-item">
-                            <img src="img/plastic_fish.jpg" class="d-block w-100" alt="plastic bag in the shape of fish">
+                            <img src="img/plastic_fish.jpg" class="d-block w-100" alt="plastic fish">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Plastic and the ocean</h5>
+                                <p>About 11 million tons of plastic enter the oceans annually, projected to triple by 2040 if no action is taken.</p>
+                            </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -111,11 +146,8 @@
                 <img class="line" src="/svg/line.svg" alt="line">
                 <!-- <div class="line"></div> -->
                 <div class="video-impact">
-                    <div class="play_icon">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
                     <div class="image-container">
-                        <a href="https://www.youtube.com/watch?v=A3oL7v7PLac"><img src="img/green-garden-reused-plastic-bottles.png" alt="green plants garden made of reused plastic bottles"></a>
+                        <a href="https://www.youtube.com/watch?v=A3oL7v7PLac"><img src="img/thumbnail.jpg" alt="small plant in plastic bottle"></a>
                     </div>
                 </div>
                 <a href="https://www.youtube.com/greenpeace"><button>More videos</button></a>

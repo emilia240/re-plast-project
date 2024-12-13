@@ -88,6 +88,14 @@ h3 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-family: "futura-pt demi", sans-serif;
+  font-weight: 600;
+  color: var(--white-smoke);
+  text-align: center;
+  text-transform: uppercase;
+}
+
 p {
   font-family: "greycliff-cf", sans-serif;
   font-weight: 400;
@@ -190,13 +198,23 @@ p {
   padding-bottom: 80px;
 }
 
-.carousel-slide{
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-container p{
+  text-align: center;
+}
+
+/* .carousel-slide{
   width: fit-content;
   height: auto;
-}
+} */
 
 .carousel button{
   box-shadow: none;
+  transform: translateY(0);
+  border-radius: 0;
 }
 
 .info-container {
@@ -254,9 +272,46 @@ p.footer-text {
 
 .navigation {
   background-color: var(--white-smoke);
-  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%; 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  
+  z-index: 1;
+  position: fixed;
+}
+
+.navbar-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav p{
+  margin: 0;
+}
+
+.nav-sign {
+  border-radius: 10px;
+  color: var(--white-smoke);
+  background-color: var(--office-green);
+  padding: 6px 32px;
+}
+
+button.navbar-toggler{
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+button.navbar-toggler:hover{
+  transform: translateY(0);
+}
+
+button.navbar-toggler:focus{
+  box-shadow: none;
 }
 
 .menu-container img {
@@ -565,7 +620,7 @@ p.footer-text {
 @media (width <1200px) {
   .container-split, .container-environment-information, .video-impact {
     flex-direction: column-reverse;
-    padding: 32px 32px;
+    padding: 80px 32px 32px 32px;
     gap: 32px;
   }
 
@@ -580,7 +635,7 @@ p.footer-text {
 
   .carousel-container, .video-impact{
     width: 100%;
-    padding: 32px;
+    padding: 80px 32px 32px 32px;
   }
 }
 
@@ -623,6 +678,10 @@ p.footer-text {
   .info-container {
     padding: 48px;
     margin-top: 32px;
+  }
+
+  .container-split, .container-environment-information, .carousel-container, .video-impact {
+    padding-top: 32px;
   }
 
   /* video */

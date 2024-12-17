@@ -94,12 +94,6 @@ p {
   font-size: 22px;
   line-height: 1.5;
 }
-/* illustrations*/
-.bottle-right {
-  width: 150px;
-  align-self: flex-end;
-  z-index: 1;
-}
 
 /* containers */
 .background-container {
@@ -116,7 +110,7 @@ p {
   align-items: center;
   justify-content: center;
 
-  background-image: url(../img/hero_picture.jpg); 
+  background-image: url(../img/hero_picture_plastic_bag.jpg); 
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center center;
@@ -257,13 +251,6 @@ p {
   transform: scale(1.1); 
 }
 
-/* .nav-sign {
-  border-radius: 10px;
-  color: var(--white-smoke);
-  background-color: var(--office-green);
-  padding: 6px 32px;
-} */
-
 button.navbar-toggler{
   box-shadow: none;
   border: none;
@@ -299,7 +286,7 @@ button.navbar-toggler:focus{
   white-space: nowrap; */
   margin-top:64px;
   width: 100%;
-  background-color:rgba(12, 12, 12, 0.650);
+  background-color:rgba(6, 18, 23, 0.75);
   padding:8px;
 
 }
@@ -343,10 +330,22 @@ button.navbar-toggler:focus{
 }
 
 /* Environment */
-/* .environment {
+
+.environment {
   height: fit-content;
-} */
+  position: relative;
+}
  
+/* illustrations*/
+.bottle-right {
+  position: absolute;
+  width: 200px;
+  align-self: flex-end;
+  z-index: 1;
+}
+
+
+
 /* carrousel */
 .carousel-inner {
   border-top: 8px solid var(--sun-glow);
@@ -365,15 +364,33 @@ button.navbar-toggler:focus{
 }
 
 .carousel-caption {
-  background-color:rgba(12, 12, 12, 0.650);
+  background-color:rgba(6, 18, 23, 0.75);
   padding:8px;
   border-radius: 15px;
 }
 
 /* Our impact */
-/* .impact {
+
+.impact {
   height: fit-content;
-} */
+  position: relative;
+}
+
+/* illustrations*/
+.bottle-left {
+  position: absolute;
+  width: 200px;
+  align-self: flex-start;
+  z-index: 1;
+}
+
+.sunflower {
+  position: absolute;
+  width: 100px;
+  align-self: flex-end;
+  bottom: 5%;
+  z-index: 1;
+}
 
 .video-impact {
   display: flex;
@@ -434,10 +451,6 @@ p.footer-text {
   width: 25%;
   height: fit-content;
   text-align: center;
-}
-
-ol, ul{
-  padding: 0;
 }
 
 .footer-links ul li a:hover {
@@ -509,6 +522,10 @@ ol, ul{
   .carousel-container, .video-impact{
     width: 100%;
     padding: 80px 32px 32px 32px;
+  }
+
+  .bottle-left, .bottle-right, .sunflower {
+    display: none;
   }
 }
 
@@ -619,6 +636,7 @@ ol, ul{
 
   button {
     font-size: 14px;
+    padding: 18px 40px;
   }
 
   .line {
@@ -646,6 +664,12 @@ ol, ul{
   .nav-link {
     padding: 5px;
   }
+
+  /* carousel */
+  .d-md-block {
+    display: block !important;
+  }
+
 
   /* footer */
   .footer-container {
@@ -680,6 +704,10 @@ ol, ul{
     text-align: center;
     line-height: 1.2;
     font-size: 16px;
+  }
+
+  ol, ul{
+    padding: 0;
   }
 
 }

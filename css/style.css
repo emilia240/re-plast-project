@@ -367,6 +367,7 @@ button.navbar-toggler:focus{
 .carousel-caption {
   background-color:rgba(12, 12, 12, 0.650);
   padding:8px;
+  border-radius: 15px;
 }
 
 /* Our impact */

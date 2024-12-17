@@ -353,10 +353,6 @@ button.navbar-toggler:focus{
   border-radius: 15px;
 }
 
-.carousel-container p{
-  text-align: center;
-}
-
 .carousel button{
   box-shadow: none;
   transform: translateY(0);
@@ -668,6 +664,18 @@ p.footer-text {
   /* carousel */
   .d-md-block {
     display: block !important;
+  }
+
+  .carousel-container p{
+    font-size: 10px;
+  }
+
+  .carousel-container h3{
+    font-size: 15px;
+  }
+
+  .carousel-caption {
+    padding: 32px;
   }
 
 
